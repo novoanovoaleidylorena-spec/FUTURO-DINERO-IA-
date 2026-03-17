@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: black;
+  color: #00ffd5;
+}
+
+/* Fondo animado tipo circuitos */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #001f2f, #000);
+  animation: glow 5s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes glow {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
+}
+
+.app {
+  padding: 20px;
+}
+
+.robot {
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #021a2e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffd5;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px;
+  width: 100%;
+  background: linear-gradient(90deg, #00ffd5, #00ff88);
+  border: none;
+  cursor: pointer;
+}
+
+.results {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.money-bar {
+  height: 20px;
+  background: #333;
+  border-radius: 10px;
+}
+
+#progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #00ff88, #00ffd5);
+  transition: 1s;
+}
+
+/* contador dinero */
+.counter {
+  font-size: 28px;
+  margin-top: 15px;
+  color: #00ff88;
+}
+
+img {
+  width: 150px;
+  margin-top: 20px;
+}
